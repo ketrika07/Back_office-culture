@@ -1,0 +1,402 @@
+.online-course {
+    background-color: #3be2b1;
+    height: 812px;
+    position: relative;
+    width: 375px;
+  }
+  
+  .online-course .overlap {
+    background-color: #ffffff;
+    border-radius: 55px 55px 0px 0px;
+    box-shadow: 8px 0px 40px #198d6a80;
+    height: 473px;
+    left: 0;
+    position: absolute;
+    top: 339px;
+    width: 375px;
+  }
+  
+  .online-course .text-wrapper {
+    color: #101436;
+    font-family: "Source Sans Pro", Helvetica;
+    font-size: 24px;
+    font-weight: 600;
+    left: 17px;
+    letter-spacing: 0.17px;
+    line-height: normal;
+    position: absolute;
+    top: 50px;
+  }
+  
+  .online-course .div {
+    color: #101436;
+    font-family: "Open Sans", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 17px;
+    letter-spacing: 0.1px;
+    line-height: normal;
+    opacity: 0.35;
+    position: absolute;
+    top: 105px;
+  }
+  
+  .online-course .welcome-to-the-cours {
+    color: #101436;
+    font-family: "Open Sans", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 17px;
+    letter-spacing: 0.11px;
+    line-height: normal;
+    position: absolute;
+    top: 127px;
+  }
+  
+  .online-course .overlap-group {
+    background-color: #00d092;
+    border-radius: 5px;
+    height: 36px;
+    left: 321px;
+    position: absolute;
+    top: 110px;
+    width: 36px;
+  }
+  
+  .online-course .icon-play {
+    height: 12px;
+    left: 13px;
+    position: absolute;
+    top: 12px;
+    width: 10px;
+  }
+  
+  .online-course .text-wrapper-2 {
+    color: #101436;
+    font-family: "Open Sans", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 17px;
+    letter-spacing: 0.1px;
+    line-height: normal;
+    opacity: 0.35;
+    position: absolute;
+    top: 171px;
+  }
+  
+  .online-course .design-thinking-in {
+    color: #101436;
+    font-family: "Open Sans", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 17px;
+    letter-spacing: 0.11px;
+    line-height: normal;
+    position: absolute;
+    top: 193px;
+  }
+  
+  .online-course .icon-play-wrapper {
+    background-color: #00d092;
+    border-radius: 5px;
+    height: 36px;
+    left: 321px;
+    position: absolute;
+    top: 176px;
+    width: 36px;
+  }
+  
+  .online-course .text-wrapper-3 {
+    color: #101436;
+    font-family: "Open Sans", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 17px;
+    letter-spacing: 0.1px;
+    line-height: normal;
+    opacity: 0.35;
+    position: absolute;
+    top: 237px;
+  }
+  
+  .online-course .design-thinking-proc {
+    color: #101436;
+    font-family: "Open Sans", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 17px;
+    letter-spacing: 0.11px;
+    line-height: normal;
+    position: absolute;
+    top: 259px;
+  }
+  
+  .online-course .img-wrapper {
+    background-color: #00d092;
+    border-radius: 5px;
+    height: 36px;
+    left: 321px;
+    position: absolute;
+    top: 242px;
+    width: 36px;
+  }
+  
+  .online-course .text-wrapper-4 {
+    color: #101436;
+    font-family: "Open Sans", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 17px;
+    letter-spacing: 0.1px;
+    line-height: normal;
+    opacity: 0.35;
+    position: absolute;
+    top: 303px;
+  }
+  
+  .online-course .text-wrapper-5 {
+    color: #101436;
+    font-family: "Open Sans", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 17px;
+    letter-spacing: 0.11px;
+    line-height: normal;
+    position: absolute;
+    top: 325px;
+  }
+  
+  .online-course .div-wrapper {
+    background: linear-gradient(180deg, rgb(255, 142.43, 90.93) 0%, rgb(255, 199.96, 98.75) 100%);
+    border-radius: 31px;
+    box-shadow: 0px 6px 11px #ffbe896e;
+    height: 65px;
+    left: 15px;
+    position: absolute;
+    top: 379px;
+    width: 345px;
+  }
+  
+  .online-course .text-wrapper-6 {
+    color: #ffffff;
+    font-family: "Open Sans", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 129px;
+    letter-spacing: 0.14px;
+    line-height: normal;
+    position: absolute;
+    top: 18px;
+  }
+  
+  .online-course .overlap-2 {
+    background-color: #00d092;
+    border-radius: 5px;
+    height: 36px;
+    left: 321px;
+    position: absolute;
+    top: 308px;
+    width: 36px;
+  }
+  
+  .online-course .bestseller-wrapper {
+    background-size: 100% 100%;
+    height: 27px;
+    left: 16px;
+    position: absolute;
+    top: 119px;
+    width: 85px;
+  }
+  
+  .online-course .bestseller {
+    color: #101436;
+    font-family: "Source Sans Pro", Helvetica;
+    font-size: 12px;
+    font-weight: 600;
+    left: 6px;
+    letter-spacing: 0.09px;
+    line-height: normal;
+    position: absolute;
+    top: 4px;
+  }
+  
+  .online-course .text-wrapper-7 {
+    color: #101436;
+    font-family: "Open Sans", Helvetica;
+    font-size: 24px;
+    font-weight: 700;
+    left: 16px;
+    letter-spacing: 0.17px;
+    line-height: normal;
+    position: absolute;
+    top: 169px;
+  }
+  
+  .online-course .text-wrapper-8 {
+    color: #101436;
+    font-family: "Open Sans", Helvetica;
+    font-size: 32px;
+    font-weight: 400;
+    left: 17px;
+    letter-spacing: 0.23px;
+    line-height: normal;
+    position: absolute;
+    text-shadow: 0px 2px 1px #3c403f80;
+    top: 257px;
+  }
+  
+  .online-course .icon-start {
+    height: 20px;
+    left: 16px;
+    position: absolute;
+    top: 213px;
+    width: 110px;
+  }
+  
+  .online-course .element {
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 2px;
+    width: 14px;
+  }
+  
+  .online-course .text-wrapper-9 {
+    color: #101436;
+    font-family: "Open Sans", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 24px;
+    letter-spacing: 0.1px;
+    line-height: normal;
+    position: absolute;
+    top: -1px;
+  }
+  
+  .online-course .element-2 {
+    background-size: 100% 100%;
+    height: 18px;
+    left: 63px;
+    position: absolute;
+    top: 1px;
+    width: 19px;
+  }
+  
+  .online-course .text-wrapper-10 {
+    color: #101436;
+    font-family: "Open Sans", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 89px;
+    letter-spacing: 0.1px;
+    line-height: normal;
+    position: absolute;
+    top: -1px;
+  }
+  
+  .online-course .header {
+    height: 44px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 375px;
+  }
+  
+  .online-course .header-2 {
+    height: 12px;
+    left: 16px;
+    position: relative;
+    top: 16px;
+    width: 342px;
+  }
+  
+  .online-course .group {
+    height: 10px;
+    left: 318px;
+    position: absolute;
+    top: 1px;
+    width: 24px;
+  }
+  
+  .online-course .rectangle-wrapper {
+    border: 1px solid;
+    border-color: #070a3959;
+    border-radius: 2.17px;
+    height: 12px;
+    left: -1px;
+    position: absolute;
+    top: -1px;
+    width: 23px;
+  }
+  
+  .online-course .rectangle {
+    background-color: #070a39;
+    border-radius: 1.33px;
+    height: 7px;
+    left: 2px;
+    position: relative;
+    top: 1px;
+    width: 18px;
+  }
+  
+  .online-course .path {
+    height: 4px;
+    left: 22px;
+    position: absolute;
+    top: 3px;
+    width: 1px;
+  }
+  
+  .online-course .shape {
+    height: 11px;
+    left: 298px;
+    position: absolute;
+    top: 0;
+    width: 15px;
+  }
+  
+  .online-course .img {
+    height: 11px;
+    left: 275px;
+    position: absolute;
+    top: 0;
+    width: 17px;
+  }
+  
+  .online-course .shape-2 {
+    height: 10px;
+    left: 0;
+    position: absolute;
+    top: 2px;
+    width: 27px;
+  }
+  
+  .online-course .icon-back {
+    height: 16px;
+    left: 16px;
+    position: absolute;
+    top: 66px;
+    width: 52px;
+  }
+  
+  .online-course .text-wrapper-11 {
+    color: #ffffff;
+    font-family: "Roboto", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 20px;
+    letter-spacing: 0.1px;
+    line-height: normal;
+    position: absolute;
+    top: -1px;
+    white-space: nowrap;
+  }
+  
+  .online-course .icon-arrow {
+    height: 14px;
+    left: 0;
+    position: absolute;
+    top: 2px;
+    width: 8px;
+  }
+  
