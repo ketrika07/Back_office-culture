@@ -2,7 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import SideBar from './components/Sidebar';
 import sidebar_menu from './constants/sidebar-menu';
-
+import { useContext } from 'react';
+import { UserContext } from './UserContext.js';
 import './App.css';
 import Orders from './pages/Orders';
 import Terrain from './pages/Terrain';
@@ -16,12 +17,13 @@ import Ground_type from './pages/Ground_type';
 
 function App() {
 
-  const isLoggedIn = false; // Add your authentication logic here
+  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
 
   return (
+    <UserContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>
     <Router>
       <div className='dashboard-container'>
-        <SideBar menu={sidebar_menu} />
+      {isLoggedIn && <SideBar menu={sidebar_menu} />}
         <div className='dashboard-body'>
           <Routes>
             <Route
@@ -33,8 +35,8 @@ function App() {
             <Route path='/profile' element={<div></div>} />
             <Route path='/terrain' element={<Terrain />} />
             <Route path='/culture' element={<Culture />} />
-            <Route path='/register' element={<Register />} />
-            <Route path='/inscription' element={<Inscription />} />
+            {/* <Route path='/register' element={<Register />} /> */}
+            {/* <Route path='/inscription' element={<Inscription />} /> */}
             <Route path='/Check' element={<Check />} />
             <Route path='/signin' element={<Signin />} />           
             <Route path='/Ground_type' element={<Ground_type />} />
@@ -42,6 +44,7 @@ function App() {
         </div>
       </div>
     </Router>
+    </UserContext.Provider>
   );
 }
 

@@ -12,11 +12,16 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { UserContext } from '../../UserContext.js'
 
 import axios from 'axios';
 
 function SignInSide() {
   const [loading, setLoading] = React.useState(false);
+  const navigate = useNavigate();
+  const { setIsLoggedIn } = useContext(UserContext); // Utilisez useContext ici
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -41,6 +46,8 @@ function SignInSide() {
 
       // Handle successful login, e.g., navigate to home page
       console.log('Login successful');
+      setIsLoggedIn(true); // Utilisez setIsLoggedIn pour mettre à jour l'état
+      navigate('/Register');
     } catch (error) {
       // Handle login error
       console.error('Login failed');

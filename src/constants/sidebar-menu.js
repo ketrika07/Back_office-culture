@@ -22,42 +22,43 @@ const sidebar_menu = [
         path: '/Terrain',
         title: 'Ressource',
     },
+
     {
-        id: 4,
-        icon: UserIcon,
-        path: '/Signin',
-        title: 'Signin',
-    },
-    {
-        id:5,
+        id:4,
         icon: UserIcon,
         path: '/Ground_type',
         title: 'Ground_type', 
     },
     {
-        id:6,
+        id:5,
         icon: UserIcon,
         path: '/Culture',
         title: 'Culture', 
     },
+    // {
+    //     id:6,
+    //     icon: UserIcon,
+    //     path: '/Register',
+    //     title: 'Statistique', 
+    // },
     {
-        id:7,
-        icon: UserIcon,
-        path: '/Register',
-        title: 'Statistique', 
-    },
-    {
-        id:8,
+        id:6,
         icon: UserIcon,
         path: '/Check',
         title: 'Login', 
     },
     {
-        id:9,
+        id: 7,
         icon: UserIcon,
-        path: '/Inscription',
-        title: 'Inscription', 
+        path: '/Signin',
+        title: 'Signin',
     }
+    // {
+    //     id:9,
+    //     icon: UserIcon,
+    //     path: '/Inscription',
+    //     title: 'Inscription', 
+    // }
 
 
 ]
