@@ -3,21 +3,21 @@ import axios from 'axios';
 import { Select, MenuItem, TextField, Button, Container, Box } from '@mui/material';
 
 function CultureForm() {
-  const [name, setName] = useState('');
-  const [seedQuantity, setSeedQuantity] = useState(0);
-  const [yieldQuantity, setYieldQuantity] = useState(0);
-  const [unit, setUnit] = useState(0);
-  const [seedPrice, setSeedPrice] = useState(0);
-  const [yieldPrice, setYieldPrice] = useState(0);
-  const [Category, setCategory] = useState('');
-  const [groundType, setGroundType] = useState('');
-  const [cultureOptions, setCultureOptions] = useState([]);
-  const [groundTypeOptions, setGroundTypeOptions] = useState([]);
+ const [name, setName] = useState('');
+ const [seedQuantity, setSeedQuantity] = useState(0);
+ const [yieldQuantity, setYieldQuantity] = useState(0);
+ const [unit, setUnit] = useState(0);
+ const [seedPrice, setSeedPrice] = useState(0);
+ const [yieldPrice, setYieldPrice] = useState(0);
+ const [Category, setCategory] = useState('');
+ const [groundType, setGroundType] = useState('');
+ const [cultureOptions, setCultureOptions] = useState([]);
+ const [groundTypeOptions, setGroundTypeOptions] = useState([]);
 
-  useEffect(() => {
+ useEffect(() => {
     const fetchCategory = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/categories');
+        const response = await axios.get('https://culture-application.up.railway.app/api/categories');
         console.log('Categories fetched successfully', response.data);
         setCultureOptions(response.data);
       } catch (error) {
@@ -27,7 +27,7 @@ function CultureForm() {
 
     const fetchGroundTypes = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/groundtypes');
+        const response = await axios.get('https://culture-application.up.railway.app/api/typesols');
         console.log('Ground types fetched successfully', response.data);
         setGroundTypeOptions(response.data);
       } catch (error) {
@@ -37,30 +37,33 @@ function CultureForm() {
 
     fetchCategory();
     fetchGroundTypes();
-  }, []);
+ }, []);
 
-  const handleCultureSubmit = async (event) => {
+ const handleCultureSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:8080/api/culture', {
+      const categoryOption = cultureOptions.find(option => option.id === Category);
+      const groundTypeOption = groundTypeOptions.find(option => option.id === groundType);
+
+      const response = await axios.post('https://culture-application.up.railway.app/api/culture', {
         name,
         seedQuantity: Number(seedQuantity),
         yieldQuantity: Number(yieldQuantity),
         unit: Number(unit),
         seedPrice: Number(seedPrice),
         yieldPrice: Number(yieldPrice),
-        Category,
-        groundType,
+        Category: categoryOption || {},
+        groundType: groundTypeOption || {},
       });
 
       console.log('Insert successful', response.data);
     } catch (error) {
       console.error('Insert failed', error);
     }
-  };
+ };
 
-  return (
+ return (
     <Container maxWidth="sm">
       <Box bgcolor="white" p={2} component="form" onSubmit={handleCultureSubmit}>
         <TextField
@@ -129,33 +132,34 @@ function CultureForm() {
           type="number"
         />
         <Box display="flex" flexDirection="column" gap={2}>
-          <Select
-            value={Category}
+                    <Select
+            value={cultureOptions.find(option => option.id === Category) ? Category : ''}
             onChange={(e) => setCategory(e.target.value)}
-          >
+            >
             {cultureOptions.map((option, index) => (
-              <MenuItem key={index} value={option.id}>
-                {option.name}
-              </MenuItem>
-            ))}
-          </Select>
-          <Select
-            value={groundType}
+                <MenuItem key={index} value={option.id}>
+                  {option.name}
+                </MenuItem>
+              ))}
+            </Select>
+            <Select
+            value={groundTypeOptions.find(option => option.id === groundType) ? groundType : ''}
             onChange={(e) => setGroundType(e.target.value)}
-          >
+            >
             {groundTypeOptions.map((option, index) => (
-              <MenuItem key={index} value={option.id}>
-                {option.name}
-              </MenuItem>
-            ))}
-          </Select>
+                <MenuItem key={index} value={option.id}>
+                  {option.name}
+                </MenuItem>
+              ))}
+            </Select>
+
           <Button type="submit" variant="contained" sx={{ mt: 3 }}>
             Submit
           </Button>
         </Box>
       </Box>
     </Container>
-  );
+ );
 }
 
 export default CultureForm;

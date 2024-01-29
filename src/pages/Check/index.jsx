@@ -39,7 +39,7 @@ function SignInSide() {
       });
 
       // Simulate a successful login (remove this line in a real implementation)
-      await axios.post('http://localhost:8080/api/login', {
+      await axios.post('https://culture-application.up.railway.app/api/proprio', {
         email: data.get('email'),
         pwd: data.get('password'),
       });

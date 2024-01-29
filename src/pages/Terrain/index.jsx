@@ -5,17 +5,17 @@ import {TextField, Button, Container, Box } from '@mui/material';
 // import '../styles.css';
 
 function NewPage() {
-  const [name, setName] = useState('');
+  const [nom, setName] = useState('');
   const [pricePerUnit, setPricePerUnit] = useState('');
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      console.log('Submitting:', { name, pricePerUnit });
+      console.log('Submitting:', { nom, pricePerUnit });
 
-      const response = await axios.post('http://localhost:8080/api/ressource', {
-        name,
+      const response = await axios.post('https://culture-application.up.railway.app/api/ressource', {
+        nom,
         pricePerUnit,
       });
 
@@ -58,7 +58,7 @@ function NewPage() {
           id="name"
           label="Name"
           name="name"
-          value={name}
+          value={nom}
           onChange={(e) => setName(e.target.value)}
         />
         <TextField

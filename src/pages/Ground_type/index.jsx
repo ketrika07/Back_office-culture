@@ -1,70 +1,31 @@
-// import React, { useState } from 'react';
-// import axios from 'axios';
-// import {TextField, Button, Container, Box } from '@mui/material';
-
-// // import '../styles.css';
-
-// function NewPage() {
-//   const [name, setName] = useState('');
-
-//   const handleSubmit = async (event) => {
-//     event.preventDefault();
-
-//     try {
-//       const response = await axios.post('http://localhost:8080/api/groundtype', {
-//         name,
-//       });
-
-//       console.log('Insert successful', response.data);
-//     } catch (error) {
-//       console.error('Insert failed', error);
-//     }
-//   };
-
-//   return (
-//     // <div className='dashboard-content'>
-//     //   <div className='dashboard-content-container'>
-//     //     <form onSubmit={handleSubmit}>
-//     //       <input
-//     //         type='text'
-//     //         value={name}
-//     //         placeholder='Nom..'
-//     //         className='dashboard-content-input'
-//     //         onChange={(e) => setName(e.target.value)}
-//     //       />
-//     //       <button type='submit' className='dashbord-header-btn'>
-//     //         Done
-//     //       </button>
-//     //     </form>
-//     //   </div>
-//     // </div>
-//   );
-// }
-
-// export default NewPage;
-
 import React, { useState } from 'react';
 import axios from 'axios';
-import { TextField, Button, Container, Box } from '@mui/material';
+import { TextField, Button, Container, Box, Alert } from '@mui/material';
 
 function NewPage() {
-  const [name, setName] = useState('');
+ const [nom, setName] = useState('');
+ const [message, setMessage] = useState('');
+ const [severity, setSeverity] = useState('');
 
-  const handleSubmit = async (event) => {
+ const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:8080/api/groundtype', {
-        name,
+      const response = await axios.post('https://culture-application.up.railway.app/api/typesol', {
+        nom,
       });
 
       console.log('Insert successful', response.data);
+      setMessage('Insert successful');
+      setSeverity('success');
     } catch (error) {
       console.error('Insert failed', error);
+      setMessage(`Insert failed: ${error.message}`);
+      setSeverity('error');
     }
-  };
+ };
 
-  return (
+ return (
     <Container
       maxWidth="sm"
       sx={{
@@ -82,15 +43,16 @@ function NewPage() {
           id="name"
           label="Name"
           name="name"
-          value={name}
+          value={nom}
           onChange={(e) => setName(e.target.value)}
         />
         <Button type="submit" variant="contained" sx={{ mt: 3 }}>
           Submit
         </Button>
+        {message && <Alert severity={severity}>{message}</Alert>}
       </Box>
     </Container>
-  );
+ );
 }
 
 export default NewPage;
