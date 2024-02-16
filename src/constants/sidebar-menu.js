@@ -35,32 +35,24 @@ const sidebar_menu = [
         path: '/Culture',
         title: 'Culture', 
     },
-    // {
-    //     id:6,
-    //     icon: UserIcon,
-    //     path: '/Register',
-    //     title: 'Statistique', 
-    // },
     {
         id:6,
+        icon: UserIcon,
+        path: '/Register',
+        title: 'Statistique', 
+    },
+    {
+        id:7,
         icon: UserIcon,
         path: '/Check',
         title: 'Login', 
     },
     {
-        id: 7,
+        id: 6,
         icon: UserIcon,
-        path: '/Signin',
-        title: 'Signin',
+        path: '/Stat_month',
+        title: 'Stat_month',
     }
-    // {
-    //     id:9,
-    //     icon: UserIcon,
-    //     path: '/Inscription',
-    //     title: 'Inscription', 
-    // }
-
-
 ]
 
 export default sidebar_menu;

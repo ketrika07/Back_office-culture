@@ -13,7 +13,8 @@ import Inscription from './pages/Inscription';
 import Signin from './pages/Signin';
 import Check from './pages/Check';
 import Ground_type from './pages/Ground_type';
-
+import BarAnimation from './pages/Register';
+import Stat_month from './pages/Stat_month';
 
 function App() {
 
@@ -28,15 +29,14 @@ function App() {
           <Routes>
             <Route
               path='/'
-              element={isLoggedIn ? <Navigate to='/orders' /> : <Navigate to='/Check' />}
+              element={isLoggedIn ? <Navigate to='/register' /> : <Navigate to='/Check' />}
             />
             <Route path='/orders' element={<Orders />} />
             <Route path='/locations' element={<div></div>} />
             <Route path='/profile' element={<div></div>} />
             <Route path='/terrain' element={<Terrain />} />
             <Route path='/culture' element={<Culture />} />
-            {/* <Route path='/register' element={<Register />} /> */}
-            {/* <Route path='/inscription' element={<Inscription />} /> */}
+            <Route path='/register' element={<Register />} />
             <Route path='/Check' element={<Check />} />
             <Route path='/signin' element={<Signin />} />           
             <Route path='/Ground_type' element={<Ground_type />} />

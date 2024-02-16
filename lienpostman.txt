@@ -1,0 +1,19 @@
+Voici les lien postman:
+
+-lien pour ressource:
+=>  https://culture-application.up.railway.app/api/ressources
+
+-lien pour les proprios:
+=>  https://culture-application.up.railway.app/api/proprios
+
+-Lien pour typesols:
+=>  https://culture-application.up.railway.app/api/typesols
+
+-Lien pour terrains:
+=>  https://culture-application.up.railway.app/api/terrains
+
+-Lien pour categories:
+=>  https://culture-application.up.railway.app/api/categories
+
+-Lien pour les cultures:
+=>  https://culture-application.up.railway.app/api/cultures

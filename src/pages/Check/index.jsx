@@ -21,7 +21,7 @@ import axios from 'axios';
 function SignInSide() {
   const [loading, setLoading] = React.useState(false);
   const navigate = useNavigate();
-  const { setIsLoggedIn } = useContext(UserContext); // Utilisez useContext ici
+  const { setIsLoggedIn } = useContext(UserContext);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -30,7 +30,7 @@ function SignInSide() {
     try {
       setLoading(true);
 
-      // Simulate a delay for demonstration purposes (remove this line in a real implementation)
+ 
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
       console.log({
@@ -38,18 +38,18 @@ function SignInSide() {
         pwd: data.get('password'),
       });
 
-      // Simulate a successful login (remove this line in a real implementation)
-      await axios.post('https://culture-application.up.railway.app/api/proprio', {
+
+      await axios.post('https://culture-application.up.railway.app/api/login', {
         email: data.get('email'),
         pwd: data.get('password'),
       });
 
-      // Handle successful login, e.g., navigate to home page
+    
       console.log('Login successful');
-      setIsLoggedIn(true); // Utilisez setIsLoggedIn pour mettre à jour l'état
-      navigate('/Register');
+      setIsLoggedIn(true); 
+      navigate('/Culture');
     } catch (error) {
-      // Handle login error
+ 
       console.error('Login failed');
     } finally {
       setLoading(false);
@@ -98,7 +98,7 @@ function SignInSide() {
                 required
                 fullWidth
                 id="email"
-                label="Email Address"
+                label="Yvan@gmail.com"
                 name="email"
                 autoComplete="email"
                 autoFocus
@@ -108,7 +108,7 @@ function SignInSide() {
                 required
                 fullWidth
                 name="password"
-                label="Password"
+                label="root"
                 type="password"
                 id="password"
                 autoComplete="current-password"
